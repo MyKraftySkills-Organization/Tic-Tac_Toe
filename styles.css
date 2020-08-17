@@ -12,13 +12,19 @@ body{
 
 .board {
     width: 100vw;
-    height: 100vh;
+    height: 85vh;
     display: grid;
     justify-content: center;
     align-content: center;
     grid-template-columns: repeat(4, auto);
 }
-
+#currentTurn{
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+    width: 35vh;
+    margin:auto;
+}
 .cell {
     width: var(--cell-size);
     height: var(--cell-size);
@@ -61,12 +67,12 @@ body{
 
 .cell.x::before,
 .cell.x::after {
-    background-color: black;
+    background-color: red;
 }
 
 .cell.circle::before,
 .cell.circle::after {
-    background-color: black;
+    background-color: green;
 }
 
 .board.x .cell:not(.x):not(.circle):hover::before,

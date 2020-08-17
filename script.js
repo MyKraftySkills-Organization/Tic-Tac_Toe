@@ -17,6 +17,7 @@ const board = document.getElementById('board')
 const winningMessageElement = document.getElementById('winningMessage')
 const restartButton = document.getElementById('restartButton')
 const winningMessageTextElement = document.querySelector('[data-winning-message-text]')
+const currentTurn = document.getElementById('currentTurn');
 let circleTurn
 
 startGame()
@@ -77,8 +78,10 @@ function setBoardHoverClass() {
   board.classList.remove(CIRCLE_CLASS)
   if (circleTurn) {
     board.classList.add(CIRCLE_CLASS)
+    currentTurn.innerText = 'Current Turn: O'
   } else {
     board.classList.add(X_CLASS)
+    currentTurn.innerText = 'Current Turn: X'
   }
 }
 
