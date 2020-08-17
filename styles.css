@@ -16,7 +16,7 @@ body{
     display: grid;
     justify-content: center;
     align-content: center;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(4, auto);
 }
 
 .cell {
@@ -32,20 +32,23 @@ body{
 
 .cell:first-child, 
 .cell:nth-child(2),
-.cell:nth-child(3) {
+.cell:nth-child(3),
+.cell:nth-child(4)
+ {
     border-top:none;
 }
 
-.cell:nth-child(3n + 1){
+.cell:nth-child(4n + 1){
     border-left: none;
 }
-.cell:nth-child(3n + 3){
+.cell:nth-child(4n + 4){
     border-right: none;
 }
 
 .cell:last-child, 
-.cell:nth-child(8),
-.cell:nth-child(7) {
+.cell:nth-child(15),
+.cell:nth-child(14),
+.cell:nth-child(13) {
     border-bottom:none;
 }
 
